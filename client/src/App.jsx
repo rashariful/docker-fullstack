@@ -4,11 +4,10 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/message")
+    fetch("http://185.210.144.111:5000/api/message")
       .then((res) => res.json())
       .then((data) => {
         setMessage(data.message);
